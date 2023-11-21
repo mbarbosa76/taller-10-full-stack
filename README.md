@@ -34,6 +34,7 @@
 <img src="./public/images/punto-10.PNG" alt="Punto 10">
 
 <h2>Punto 11: Números impares usando "for"</h2>
+<img src="./public/images/punto-11.PNG" alt="Punto 11">
 
 <h2>Punto 12: Tabla de multiplicar usando "for"</h2>
 
