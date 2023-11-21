@@ -37,9 +37,13 @@
 <img src="./public/images/punto-11.PNG" alt="Punto 11">
 
 <h2>Punto 12: Tabla de multiplicar usando "for"</h2>
+<img src="./public/images/punto-12.PNG" alt="Punto 12">
 
 <h2>Punto 13: Suma de valores de un arreglo usando "foreach" </h2>
+<img src="./public/images/punto-13.PNG" alt="Punto 13">
 
 <h2>Punto 14: Revisión de contraseña</h2>
+<img src="./public/images/punto-14.PNG" alt="Punto 14">
 
 <h2>Punto 15: Selección de operación aritmética usando funciones</h2>
+<img src="./public/images/punto-15.PNG" alt="Punto 15">
