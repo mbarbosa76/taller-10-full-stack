@@ -21,7 +21,7 @@ function dividir($number1, $number2) {
 }
   ?>
 
-  //
+  ///
 
   <?php
 include "funtions.php";
