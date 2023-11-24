@@ -1,71 +1,83 @@
 <?php
-// FUNCIONES PARA REALIZAR LAS OPERACIONES ARITMÉTICAS
-function sumar($number1, $number2) {
-    return $number1 + $number2;
+include "operationUtils.php";
+
+// DATOS DE ENTRADA
+  $numberOne = 0;
+  $numberTwo = 0;
+  $option = "";
+
+// 1. Llamar una función para pedir números
+  $numberOne = getNumber();
+  $numberTwo = getNumber();
+
+//2. Llamar una función para mostrar el menú
+  $option = showMenu();
+
+// 3. Llamar una función para operar
+  $result = operate($numberOne, $numberTwo, $option);
+
+// 4. Mostrar el resultado
+  echo "El resultado de la operación es: " . $result;
+
+?>
+
+***********
+
+<?php
+// Función para obtener el número
+function getNumber() {
+    echo "Digite el primer número: \n";
+    return readline();
 }
 
-function restar($number1, $number2) {
-    return $number1 - $number2;
-}
+// Función para mostrar el menú y retornar respuesta
+  function showMenu() {
+    echo "Digíte el número de la operación que desea realizar: \n";
+    echo "1. SUMAR\n";
+    echo "2. RESTAR\n";
+    echo "3. MULTIPLICAR\n";
+    echo "4. DIVIDIR \n";
+    return readline();
+  }
 
-function multiplicar($number1, $number2) {
-    return $number1 * $number2;
-}
-
-function dividir($number1, $number2) {
-    if ($number2 == 0) {
-        return "Error: No se puede dividir por cero";
-    } else {
-        return $number1 / $number2;
+// Función que realice la opración
+ function operate($x, $y, $option) {
+    switch ($option) {
+      case '1':
+        return add($x, $y);
+      case '2':
+        return sub($x, $y);
+      case '3':
+        return mult($x, $y);
+      case '4':
+        return div($x, $y);
+      default:
+        echo "Opción no válida";
+        return 0;
     }
-}
-  ?>
+ }
 
-  ///
+// Función para sumar
+ function add($x, $y) {
+    return $x + $y;
+ }
 
-  <?php
-include "funtions.php";
+// Función para restar
+ function sub($x, $y) {
+    return $x - $y;
+ }
 
-// DECLARAR DATOS DE ENTRADA
-$option = 0;
-$num1 = 0;
-$num2 = 0;
+// Función para multiplicar
+ function mult($x, $y) {
+    return $x * $y;
+ }
 
-// SOLICITAR AL USUARIO LOS CÓDIGOS
-echo "Digíte el primer número: ";
-$num1 = readline();
-
-echo "Digíte el segundo número: ";
-$num2 = readline();
-
-// SOLICITAR AL USUARIO SELECCIONAR LA OEPRACIÓN QUE DESEA REALIZAR
-echo "Digite la operación, de acuerdo a:" . "\n";
-echo "1 - SUMAR \n";
-echo "2 - RESTAR \n";
-echo "3 - MULTIPLICAR \n";
-echo "4 - DIVIDIR \n";
-echo "5 - SALIR \n";
-
-$option = readline("Opción: ");
-
-// REALIZAR LAS OEPRACIONES ARITMÉTICAS CON SWITCH
-switch ($option) {
-    case 1:
-        echo "El resultado de la suma es: " . sumar($num1, $num2);
-        break;
-    case 2:
-        echo "El resultado de la resta es: " . restar($num1, $num2);
-        break;
-    case 3:
-        echo "El resultado de la multiplicación es: " . multiplicar($num1, $num2);
-        break;
-    case 4:
-        echo "El resultado de la división es: " . dividir($num1, $num2);
-        break;
-    case 5:
-        echo "Saliendo del programa. ¡Hasta pronto!. \n";
-        break;
-    default:
-        echo "Operación no válida";
-}
+// Función para dividir
+ function div($x, $y) {
+   if ($number2 == 0) {
+       return "un error, o se puede dividir por cero";
+   } else {
+    return $x / $y;
+ }
+ }
 ?>
